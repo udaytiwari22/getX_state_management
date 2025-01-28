@@ -4,9 +4,9 @@ import 'package:get/get.dart';
 
 class CounterPage extends StatelessWidget {
   CounterPage({super.key});
-  final CounterController controller = Get.put(CounterController());
   @override
   Widget build(BuildContext context) {
+    final controller = Get.find<CounterController>();
     return Scaffold(
       appBar: AppBar(
         title: const Text("GetX counter App"),
@@ -20,7 +20,7 @@ class CounterPage extends StatelessWidget {
               builder: (controller) => Text(
                 "${controller.count}",
                 style: const TextStyle(
-                  fontSize: 50,
+                  fontSize: 45,
                   fontWeight: FontWeight.bold,
                 ),
               ),
