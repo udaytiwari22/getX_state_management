@@ -16,11 +16,13 @@ class CounterPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Obx(
-              () => Text(
-                '${controller.count}',
-                style:
-                    const TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
+            GetBuilder<CounterController>(
+              builder: (controller) => Text(
+                "${controller.count}",
+                style: const TextStyle(
+                  fontSize: 50,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
             const SizedBox(height: 40),
