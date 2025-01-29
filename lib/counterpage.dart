@@ -19,10 +19,8 @@ class CounterPage extends StatelessWidget {
             GetBuilder<CounterController>(
               builder: (controller) => Text(
                 "${controller.count}",
-                style: const TextStyle(
-                  fontSize: 45,
-                  fontWeight: FontWeight.bold,
-                ),
+                style:
+                    const TextStyle(fontSize: 45, fontWeight: FontWeight.bold),
               ),
             ),
             const SizedBox(height: 40),
